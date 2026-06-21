@@ -158,16 +158,6 @@ export default function MovieDetailPage() {
               <div className="player-wrapper">
                 <iframe src={activeEp.link_embed} allowFullScreen frameBorder="0"
                         title={movie.name} allow="autoplay; encrypted-media" />
-                {isMobile && (
-                  <button
-                    type="button"
-                    className="rotate-btn"
-                    onClick={toggleLandscape}
-                    aria-label={isLandscape ? 'Thoát xoay màn hình' : 'Xoay màn hình ngang'}
-                  >
-                    <FiRotateCw />
-                  </button>
-                )}
               </div>
               <div className="player-controls">
                 <div className="player-controls__left">
@@ -175,15 +165,6 @@ export default function MovieDetailPage() {
                           onClick={() => setLightsOff(!lightsOff)}>
                     {lightsOff ? '💡 Bật đèn' : '🌙 Tắt đèn'}
                   </button>
-                  {isMobile && (
-                    <button
-                      type="button"
-                      className={`rotate-btn rotate-btn--bar ${isLandscape ? 'rotate-btn--active' : ''}`}
-                      onClick={toggleLandscape}
-                    >
-                      <FiRotateCw /> {isLandscape ? 'Thoát xoay' : 'Xoay ngang'}
-                    </button>
-                  )}
                 </div>
                 {activeEp && activeBroadcast && (
                   <span className="current-ep-label">
