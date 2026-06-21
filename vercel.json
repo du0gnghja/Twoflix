@@ -1,0 +1,24 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/ophim/:path*",
+      "destination": "https://ophim1.com/:path*"
+    },
+    {
+      "source": "/api/kkphim/:path*",
+      "destination": "https://phimapi.com/:path*"
+    },
+    {
+      "source": "/((?!assets|favicon|api).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "s-maxage=300, stale-while-revalidate=600" }
+      ]
+    }
+  ]
+}
