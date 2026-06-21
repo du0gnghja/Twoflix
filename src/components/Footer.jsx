@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="footer__brand">
           <Link to="/" className="header__logo">
   <img
-    src="/logo.png"
+    src="/cc.png"
     alt="DNFlix Logo"
     className="header__logo-image"
   />
