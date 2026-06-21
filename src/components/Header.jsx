@@ -53,7 +53,7 @@ export default function Header() {
       <div className="header__inner container">
         <Link to="/" className="header__logo">
   <img
-    src="/logo.png"
+    src="/cc.png"
     alt="DNFlix Logo"
     className="header__logo-image"
   />
